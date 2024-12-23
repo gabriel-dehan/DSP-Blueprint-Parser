@@ -13,4 +13,6 @@ task default: %i[spec rubocop]
 
 
 require 'rake/extensiontask'
-Rake::ExtensionTask.new('md5f')
+Rake::ExtensionTask.new('md5f') do |ext|
+  ext.lib_dir = 'lib/dsp_blueprint_parser'
+end
